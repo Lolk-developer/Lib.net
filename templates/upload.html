@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Интернет библиотека, онлайн библиотека">
+    <title>Lib.net - страница загрузки книг</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/upload.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Lib.net - интернет библиотека</h1>
+        <h4>Страница загрузки книг</h4>
+    </header>
+    <main>
+        <form method="post">
+            <label>Введите ФИО автора: </label>
+            <input type="text" name="author_name" id="author_name"><br><br>
+            <label>Введите название книги: </label>
+            <input type="text" name="book_name" id="book_name"><br><br>
+            <label>Введите описание: </label>
+            <textarea name="description" id="description"></textarea><br><br>
+            <label>Введите ссылку на книгу (ссылка на облако): </label>
+            <input type="text" name="links" id="links" maxlength="100"><br><br>
+            <input type="reset" value="Стереть данные">
+            <input type="submit">
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/results.css') }}">
+    <title>Результаты</title>
+</head>
+<body>
+    <header>
+        <h1>Lib.net - интернет библиотека</h1>
+        <hr>
+        <h4>Результаты по запросу {{ query }}</h4>
+    </header>
+    <main>
+        {% for el in search_book %}
+        <div class="books">
+            <h2>{{ el.book_name }}</h2>
+            <p>{{ el.author_name }}</p>
+            <a href="{{ el.genre }}/{{ el.id }}"><input type="button" value="Читать"></a>
+        </div>
+        {% endfor %}
+    </main>
+</body>
+</html>

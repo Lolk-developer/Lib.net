@@ -1,0 +1,20 @@
+body {
+    font-size: 16px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #F3F0E7;
+}
+
+#links {
+    width: 600px;
+}
+
+#author_name, #book_name, #description, #links {
+    background-color: #F3F0E7;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border-radius: 0%;
+    border: 1px solid black;
+}
+
+#author_name, #book_name {
+    width: 200px;
+}

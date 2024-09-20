@@ -1,0 +1,90 @@
+html, body{
+    height: 100%;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #F3F0E7;
+}
+
+#slide-menu {
+    position: fixed;
+    width: 180px;
+    height: 100%;
+    left: 0;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    background-color: #F3F0E7;
+}
+
+#slide-menu p {
+    padding: 6px 8px 6px 16px;
+}
+
+#slide-menu a {
+    text-decoration: none;
+    color: black;
+    padding: 6px 8px 6px 16px;
+    display: block;
+}
+
+#slide-menu a:hover {
+    background-color: white;
+}
+
+
+.upload-book {
+    text-align: right;
+}
+
+
+main {
+    padding-left: 200px
+}
+
+.books {
+    margin-top: 20px;
+    border: 2px solid black;
+}
+
+.books h2, .books p {
+    margin-left: 10px;
+}
+
+.books input {
+    color: #F3F0E7;
+    background-color: black;
+    border-radius: 0%;
+    border: 1px solid black;
+}
+
+.search-and-upload-book {
+    text-align: center;
+}
+  
+.search,
+.upload-book {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.upload-book input[type="button"] {
+    background-color: #F3F0E7;
+    border: 2px solid black;
+    border-radius: 0%;
+}
+
+.upload-book {
+    float: right;
+}
+
+.search input[type="text"] {
+    width: 600px;
+}
+
+.search input[type="text"], .search input[type="submit"] {
+    background-color: #F3F0E7;
+    border: 2px solid black;
+    border-radius: 0%;
+}

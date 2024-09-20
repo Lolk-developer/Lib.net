@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ book.book_name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/books.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Lib.net - интернет библиотека</h1>
+        <hr>
+        <h4>Книга</h4>
+    </header>
+    <nav id="slide-menu">
+        <p>Выберите жанр:</p>
+        <a href="/classic_ru">Классика русской литературы</a>
+        <a href="/classic_foreign">Классика зарубежной литературы</a>
+        <a href="/fantasy">Фентези</a>
+        <a href="/dramma">Драмма</a>
+        <a href="/comedy">Комедия</a>
+        <a href="/tragedy">Трагедия</a>
+        <a href="/documental">Документальные книги</a>
+        <a href="/horror">Хоррор</a>
+        <a href="/triller">Триллер</a>
+        <a href="/student">Учебники</a>
+    </nav>
+    <main>
+        <h2>{{ book.book_name }}</h2>
+        <p>Автор: {{ book.author_name }}</p>
+        <p>Описание: {{ book.description }}</p>
+        <a href="{{ book.links }}"><input type="button" value="Скачать"></a>
+    </main>
+</body>
+</html>

@@ -1,0 +1,25 @@
+html, body{
+    height: 100%;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #F3F0E7;
+}
+
+.books {
+    margin-top: 20px;
+    border: 2px solid black;
+}
+
+.books h2, .books p {
+    margin-left: 10px;
+}
+
+.books input {
+    color: #F3F0E7;
+    background-color: black;
+    border-radius: 0%;
+    border: 1px solid black;
+}

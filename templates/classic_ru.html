@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="интернет библиотека, онлайн библиотека">
+    <meta name="keyword" content="читать классику русской литературы онлайн, читать классику русской литературы бесплатно, интернет библиотека, онлайн библиотека">
+    <title>Lib.net - Классика русской литературы</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/classic_ru.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Lib.net - интернет библиотека</h1>
+        <hr>
+        <h4>Классика русской литературы</h4>
+    </header>
+    <nav id="slide-menu">
+        <p>Выберите жанр:</p>
+        <a href="/classic_ru">Классика русской литературы</a>
+        <a href="/classic_foreign">Классика зарубежной литературы</a>
+        <a href="/fantasy">Фентези</a>
+        <a href="/dramma">Драмма</a>
+        <a href="/comedy">Комедия</a>
+        <a href="/tragedy">Трагедия</a>
+        <a href="/documental">Документальные книги</a>
+        <a href="/horror">Хоррор</a>
+        <a href="/triller">Триллер</a>
+        <a href="/student">Учебники</a>
+    </nav>
+    <main>
+        <div class="search-and-upload-book">
+            <form action="/results" method="post" class="search">
+                <input type="text" name="query" id="query" placeholder="Введите название книги для поиска">
+                <input href="/results" type="submit" id="submit" value="Найти">
+            </form>
+            <form action="" class="upload-book">
+                <a href="student/upload"><input type="button" value="+ Создать ветку"></a><br><br>
+            </form>
+        </div>
+        {% for el in classic_ru_books %}
+        <div class="books">
+            <h2>{{ el.book_name }}</h2>
+            <p>{{ el.author_name }}</p>
+            <a href="classic_ru/{{ el.id }}"><input type="button" value="Читать"></a>
+        </div>
+        {% endfor %}
+    </main>
+</body>
+</html>
